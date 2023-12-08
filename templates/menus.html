@@ -1,0 +1,46 @@
+{% load draw_menu %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menus</title>
+    <style>
+      body {
+        font-size: 16px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-inline-start: 0;
+        margin-left: 20px;
+
+        border-left: 1px solid black;
+      }
+
+      li::before {
+        content: "―";
+        display: inline-block;
+      }
+
+      a {
+        color: #0000ee;
+      }
+
+      li.active > a {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Django menu app.</h1>
+
+    <a href="{% url 'menus' %}">Close all</a>
+
+    {% for menu in menus %}
+    {% draw_menu menu.slug %}
+    {% endfor %}
+  </body>
+</html>

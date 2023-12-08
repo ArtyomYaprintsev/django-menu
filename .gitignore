@@ -1,0 +1,16 @@
+# IDE
+.idea/
+.vscode/
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__
+
+# Backup files
+*.bak
+
+# Environment
+venv/
+venv.bak/

@@ -1,0 +1,14 @@
+{% load draw_items %}
+
+<ul>
+  {% for item, child_items in items.items %}
+  <li class="{% if active == item.id %}active{% else %}inactive{% endif %}">
+    <a href=".?{% query_to_item query item %}">{{ item }}</a>
+  </li>
+
+  {% if child_items %}
+  {% draw_items child_items %}
+  {% endif %}
+
+  {% endfor %}
+</ul>
