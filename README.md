@@ -14,6 +14,16 @@ Also template may to contain multiple menus.
 
 ![multiple-menus-example](./image/multiple-menus-example.png)
 
+### Task list
+
+- [x] Menu draws with template tag.
+- [x] Everything above the active item is expanded. The first level of nesting under the active item is also expanded.
+- [x] Menus and their items are stored in the database.
+- [x] Menus and their items can be edited in the Django admin site.
+- [x] A template can contain several menus.
+- [x] Navigation through active menu items is carried out via URL.
+- [x] Each menu drawing requires only 1 database query.
+
 ## Installation
 
 Clone this repository.
