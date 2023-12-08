@@ -31,5 +31,5 @@ def draw_items(context, items: Tree):
 
 @register.simple_tag(name="query_to_item")
 def query_to_item(pattern: str, item: Item):
-    """Feels pattern with item id."""
+    """Fill pattern with item id."""
     return pattern % item.id
